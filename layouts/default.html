@@ -1,0 +1,22 @@
+<html>
+<head>
+    {{#if is_pageTitle}}
+    <title>{{pageTitle}} | {{config.siteName}}</title>
+    {{else}}
+    <title>{{config.siteName}}</title>
+    {{/if}}
+    <script type="javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="javascript" src="js/main.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        {{!-- headerを読み込む --}}
+        {{> header}} {{!-- header.hbsを読み込みます --}}
+        <div id="container">
+             {{> body}} {{!-- ページごとに読み込む部分 --}}
+        </div>
+        {{!-- footerを読み込む --}}
+        {{> footer}} {{!-- footer.hbsを読み込みます --}}
+    </div>
+</body>
+</html>
